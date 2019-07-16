@@ -1,0 +1,22 @@
+# day 1/100
+# Defanging an IP Address
+# Link : https://leetcode.com/problems/defanging-an-ip-address/
+
+
+class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        # string is immutable(can't be modified), we need to convert it to List first
+        myList = []
+        for i in address:
+            if( i == '.'):
+                myList.append("[.]")
+            else:
+                myList.append(i)
+                
+        myString = ""
+        
+        for i in myList:
+            myString = myString + i
+        
+        return myString
+        
